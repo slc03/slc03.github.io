@@ -1,4 +1,6 @@
-- Waiting
+- C. Cao*, <strong>L. Song*</strong>, Z. Li, X. Le, X. Zhang, H. Xue, and F. Yang (2025). 
+Reviving DSP for Advanced Theorem Proving in the Era of Reasoning Models. 
+<strong>Advances in Neural Information Processing Systems (NeurIPS)</strong>. [[Paper]](https://openreview.net/forum?id=yTFJmGFsEy)
 
 <!-- - <strong>S. Li</strong>, X. Yang*, A. Cao*, K. Fan, Y. Liu, C. Wang, and Q.Niu . LaNCoR: Label Noise-Contrastive Robust Learning for Seismic Signal Processing with Application to Microseismic Arrival Time Picking. <strong>In Revision.</strong> [[Code]](https://github.com/senli1073/LaNCor)
 

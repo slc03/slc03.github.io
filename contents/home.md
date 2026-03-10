@@ -12,5 +12,4 @@ M.E., Intelligent Science and Technology (Artificial Intelligence), University o
 B.E., Data Science and Big Data Technology, University of Science and Technology of China, 2021—2025.
 
 #### Research Interests
-Large Language Models, Mathematical Reasoning, Recommendation Systems.
-
+Quantitative Trading, Formal Reasoning, Agent Systems.
