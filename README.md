@@ -1,3 +1,8 @@
-# slc03.github.io
+# 🌐 slc03.github.io
 
-My Github Page -> [link](https://slc03.github.io/)
+Personal academic homepage hosted on GitHub Pages.
+
+[![Homepage](https://img.shields.io/badge/Homepage-Visit%20Now-blue)](https://slc03.github.io/)
+
+🔗 **Website:**  
+https://slc03.github.io/
