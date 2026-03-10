@@ -2,11 +2,11 @@
 
 
 :root{
-    --h-title-color:#3948d2;
+    --h-title-color:#3fb0ac;
 }
 
 .header {
-    border-bottom: solid 2px var(--bs-blue);
+    border-bottom: solid 2px var(--h-title-color);
     z-index: 10000;
 }
 
@@ -38,7 +38,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.35);
 }
 
 section header h2{

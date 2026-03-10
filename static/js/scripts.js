@@ -2,7 +2,7 @@
 
 const content_dir = 'contents/'
 const config_file = 'config.yml'
-const section_names = ['home', 'publications', 'awards']
+const section_names = ['home', 'publications', 'awards', 'blog']
 
 
 window.addEventListener('DOMContentLoaded', event => {
@@ -54,12 +54,53 @@ window.addEventListener('DOMContentLoaded', event => {
             .then(response => response.text())
             .then(markdown => {
                 const html = marked.parse(markdown);
-                document.getElementById(name + '-md').innerHTML = html;
+                const container = document.getElementById(name + '-md');
+                container.innerHTML = html;
+                if (name === 'blog') {
+                    renderBlogList(container);
+                }
             }).then(() => {
                 // MathJax
                 MathJax.typeset();
             })
             .catch(error => console.log(error));
     })
+
+    function renderBlogList(container) {
+        fetch(content_dir + 'posts/index.json')
+            .then(resp => resp.json())
+            .then(posts => {
+                const row = document.createElement('div');
+                row.className = 'row g-4 mt-1';
+                posts.forEach(post => {
+                    const col = document.createElement('div');
+                    col.className = 'col-12';
+                    const card = document.createElement('div');
+                    card.className = 'card border-0 shadow-sm';
+                    const cardBody = document.createElement('div');
+                    cardBody.className = 'card-body';
+                    const title = document.createElement('h5');
+                    title.className = 'card-title';
+                    const a = document.createElement('a');
+                    a.href = 'post.html?slug=' + encodeURIComponent(post.slug);
+                    a.textContent = post.title || post.slug;
+                    title.appendChild(a);
+                    const meta = document.createElement('div');
+                    meta.className = 'text-muted small mb-2';
+                    meta.textContent = post.date || '';
+                    const excerpt = document.createElement('p');
+                    excerpt.className = 'card-text';
+                    excerpt.textContent = post.excerpt || '';
+                    cardBody.appendChild(title);
+                    cardBody.appendChild(meta);
+                    cardBody.appendChild(excerpt);
+                    card.appendChild(cardBody);
+                    col.appendChild(card);
+                    row.appendChild(col);
+                });
+                container.appendChild(row);
+            })
+            .catch(err => console.log(err));
+    }
 
 }); 
